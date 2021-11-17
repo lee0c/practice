@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "node.h"
 #include "linkedlist.h"
 
 /* Problem statement: Given two numbers represented as linked lists where the
@@ -9,7 +8,7 @@ first item is the tens place, the second the hundreds place, and so on, add
 them and return the result in the same format. */
 
 /* Compile with: 
-gcc -Wall addnumbersaslists.c -o addnumbersaslists.out
+gcc -Wall addnumbersaslists.c linkedlist.c -o addnumbersaslists.out
 */
 
 int main (int argc, char* argv[])

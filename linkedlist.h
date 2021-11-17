@@ -1,78 +1,36 @@
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 
-#include <stdio.h>
-#include <string.h>
-
-#include "node.h"
+/* Node and list structs */
+struct node
+{
+  int val;
+  struct node *next;
+};
 
 struct list
 {
   struct node *head;
 };
 
-void printList(struct list *l)
-{
-  printf("[");
+/* Create an empty list */
+struct list * createList();
+/* Create a list from a string formatted #,#,#... */
+struct list * createListFromString(char *str);
 
-  struct node *ptr = l->head;
-  while (ptr)
-  {
-    printf("%d", ptr->val);
-    if (ptr->next) { printf(","); }
-    ptr = ptr->next;
-  }
+/* Add a value to the end of the list */
+void append(struct list *l, int val);
+/* Append by passing a pre-created node */
+void appendNode(struct list *l, struct node* n);
 
-  printf("]\n");
-}
+/* Print a list */
+void printList(struct list *l);
 
-/* Add to the end of the list */
-void append(struct list *l, int val)
-{
-  struct node *link = (struct node *)malloc(sizeof(struct node));
-  link->val = val;
-  link->next = NULL;
-
-  if (!l->head) {
-    l->head = link;
-    return;
-  }
-
-  struct node *ptr = l->head;
-  while (ptr->next) { ptr = ptr->next; }
-  ptr->next = link;
-}
-
-struct list * createList()
-{
-  struct list *l = (struct list *)malloc(sizeof(struct list));
-  return l;
-}
-
-struct list * createListFromString(char *str)
-{
-  struct list *l = createList();
-  
-  char *num;
-  int val;
-
-  num = strtok(str, ",");
-  while (num != NULL)
-  {
-    sscanf(num, "%d", &val);
-    append(l, val);
-
-    num = strtok(NULL, ",");
-  }
-
-  return l;
-}
-
-void freeList(struct list *l)
-{
-  if (l->head) { freeNode(l->head); }
-
-  free(l);
-}
+/* Free a list struct but not its nodes */
+void freeListOnly(struct list *l);
+/* Free a list struct and all nodes */
+void freeList(struct list *l);
+/* Free a node */
+void freeNode(struct node *n);
 
 #endif
