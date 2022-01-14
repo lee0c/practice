@@ -5,7 +5,9 @@
 /* Problem statement: Given a signed 32-bit integer, return true if it is
 palindromic and false otherwise */
 
-/* Compile with: gcc -Wall palindromeinteger-string.c -o palindromeinteger.out */
+/* Compile with:
+gcc -Wall palindromeinteger-string.c -o palindromeinteger.out
+*/
 
 int main (int argc, char* argv[])
 {
