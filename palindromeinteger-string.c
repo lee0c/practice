@@ -6,7 +6,7 @@
 palindromic and false otherwise */
 
 /* Compile with:
-gcc -Wall palindromeinteger-string.c -o palindromeinteger.out
+gcc -Wall palindromeinteger-string.c -o palindromeinteger.o
 */
 
 int main (int argc, char* argv[])

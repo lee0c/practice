@@ -4,8 +4,8 @@
 /* Problem statement: */
 
 /* Compile with: 
-gcc -Wall name.c -o name.out
-gcc -Wall name.c -o name.out -D DEBUG
+gcc -Wall name.c -o name.o
+gcc -Wall name.c -o name.o -D DEBUG
 */
 
 int main (int argc, char* argv[])

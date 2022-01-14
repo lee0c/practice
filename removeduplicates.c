@@ -5,7 +5,7 @@
 /* Problem statement: Remove duplicates from a sorted array of ints, modifying it in-place */
 
 /* Compile with: 
-gcc -Wall removeduplicates.c -o removeduplicates.out
+gcc -Wall removeduplicates.c -o removeduplicates.o
 */
 
 int main (int argc, char* argv[])

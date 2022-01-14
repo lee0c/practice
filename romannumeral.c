@@ -17,7 +17,7 @@ Constraints:
 */
 
 /* Compile with: 
-gcc -Wall romannumeral.c -o romannumeral.out
+gcc -Wall romannumeral.c -o romannumeral.o
 */
 
 /* For easier math/clarity */

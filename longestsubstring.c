@@ -9,8 +9,8 @@ Constraints:
   string is at most 5 * 10^4 (50k) characters */
 
 /* Compile with: 
-gcc -Wall longestsubstring.c -o longestsubstring.out
-gcc -Wall longestsubstring.c -o longestsubstring.out -D DEBUG
+gcc -Wall longestsubstring.c -o longestsubstring.o
+gcc -Wall longestsubstring.c -o longestsubstring.o -D DEBUG
 */
 
 int main (int argc, char* argv[])

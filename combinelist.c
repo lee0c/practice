@@ -7,7 +7,7 @@
 linked list by splicing the nodes together */
 
 /* Compile with: 
-gcc -Wall combinelist.c linkedlist.c -o combinelist.out
+gcc -Wall combinelist.c linkedlist.c -o combinelist.o
 */
 
 int main (int argc, char* argv[])

@@ -5,7 +5,7 @@
 0 if the answer would overflow the range of a signed 32-bit integer. */
 
 /* Compile with: 
-gcc -Wall reverseinteger.c -o reverseinteger.out
+gcc -Wall reverseinteger.c -o reverseinteger.o
 */
 
 int main (int argc, char* argv[])

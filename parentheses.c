@@ -12,7 +12,7 @@ Constraints:
 */
 
 /* Compile with: 
-gcc -Wall parentheses.c -o parentheses.out
+gcc -Wall parentheses.c -o parentheses.o
 */
 
 int isLeft(char paren)

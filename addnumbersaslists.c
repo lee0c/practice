@@ -8,7 +8,7 @@ first item is the tens place, the second the hundreds place, and so on, add
 them and return the result in the same format. */
 
 /* Compile with: 
-gcc -Wall addnumbersaslists.c linkedlist.c -o addnumbersaslists.out
+gcc -Wall addnumbersaslists.c linkedlist.c -o addnumbersaslists.o
 */
 
 int main (int argc, char* argv[])

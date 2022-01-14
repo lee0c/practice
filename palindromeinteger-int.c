@@ -7,8 +7,8 @@ palindromic and false otherwise. Implemented without string handling methods */
 
 /* Compile with:
 `-lm` links the math library
-gcc -Wall palindromeinteger-int.c -o palindromeinteger.out -lm
-gcc -Wall palindromeinteger-int.c -o palindromeinteger.out -lm -D DEBUG
+gcc -Wall palindromeinteger-int.c -o palindromeinteger.o -lm
+gcc -Wall palindromeinteger-int.c -o palindromeinteger.o -lm -D DEBUG
 */
 
 int main (int argc, char* argv[])

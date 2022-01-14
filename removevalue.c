@@ -5,7 +5,7 @@
 /* Problem statement: Remove a value from an array of ints, modifying it in-place */
 
 /* Compile with: 
-gcc -Wall removevalue.c -o removevalue.out
+gcc -Wall removevalue.c -o removevalue.o
 */
 
 int main (int argc, char* argv[])
