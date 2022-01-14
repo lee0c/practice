@@ -4,17 +4,19 @@
 #include "linkedlist.h"
 
 /* Problem statement: Given two sorted linked lists, combine into one sorted
-linked list by splicing the nodes together */
+linked list by splicing the nodes together 
+
+CURRENTLY BROKEN*/
 
 /* Compile with: 
-gcc -Wall combinelist.c linkedlist.c -o combinelist.o
+gcc -Wall combinelists.c linkedlist.c -o combinelists.o
 */
 
 int main (int argc, char* argv[])
 {
   if (argc != 3)
   {
-    printf("Usage: ./combinelist <l1 separated by commas> <l2 separated by commas>\n");
+    printf("Usage: ./combinelists <l1 separated by commas> <l2 separated by commas>\n");
     return EXIT_FAILURE;
   }
 
