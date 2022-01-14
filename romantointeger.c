@@ -17,7 +17,7 @@ Constraints:
 */
 
 /* Compile with: 
-gcc -Wall romannumeral.c -o romannumeral.o
+gcc -Wall romantointeger.c -o romantointeger.o
 */
 
 /* For easier math/clarity */
@@ -35,7 +35,7 @@ int main (int argc, char* argv[])
 {
   if (argc != 2)
   {
-    printf("Usage: ./romannumeral <roman numeral string>");
+    printf("Usage: ./romantointeger <roman numeral string>");
     return EXIT_FAILURE;
   }
 
