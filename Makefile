@@ -1,16 +1,15 @@
 # non-standard compilations
+# link math library
+palindromeinteger-int: palindromeinteger-int.c
+	gcc -Wall $^ -o $@.o -lm
 
 # use linkedlist.c
-addnumbersaslists: $@.c linkedlist.c
-	gcc -Wall $@.c linkedlist.c -o $@.out
+addnumbersaslists combinelist: linkedlist.c linkedlist.h
 
-combinelist: $@.c linkedlist.c
-	gcc -Wall $@.c linkedlist.c -o $@.out
+# basic compilation pattern
+%: %.c ; gcc -Wall $^ -o $@.o
 
-# link math library
-palindromeinteger-int: $@.c
-	gcc -Wall $@.c -o $@.out -lm
-
-# catchall compilation
-%: %.c
-	gcc -Wall $@.c -o $@.out
+# delete all .o files
+.PHONY: clean
+clean:
+	rm *.o
