@@ -1,13 +1,9 @@
 # non-standard compilations
-# link math library
-palindromeinteger-int: palindromeinteger-int.c
-	gcc -Wall $^ -o $@.o -lm
-
 # use linkedlist.c
 addnumbersaslists combinelists: linkedlist.c linkedlist.h
 
 # basic compilation pattern
-%: %.c ; gcc -Wall $^ -o $@.o
+%: %.c debug.h; gcc -Wall $^ -o $@.o -lm
 
 # delete all .o files
 .PHONY: clean

@@ -2,13 +2,16 @@
 #include <stdlib.h>
 #include <math.h>
 
+#include "debug.h"
+
 /* Problem statement: Given a signed 32-bit integer, return true if it is
 palindromic and false otherwise. Implemented without string handling methods */
 
 /* Compile with:
 `-lm` links the math library
 gcc -Wall palindromeinteger-int.c -o palindromeinteger.o -lm
-gcc -Wall palindromeinteger-int.c -o palindromeinteger.o -lm -D DEBUG
+
+Toggle debug mode in debug.h
 */
 
 int main (int argc, char* argv[])
@@ -41,7 +44,7 @@ int main (int argc, char* argv[])
   /* Reduce power of 10 until it divides into input value */
   while (input / pow(10, exp) <= 1) { exp--; }
 
-#ifdef DEBUG  
+#if DEBUG
   printf("DEBUG:\tStarting at exp %f\n", exp);
 #endif
 
@@ -50,7 +53,7 @@ int main (int argc, char* argv[])
     first = input / (int)pow(10, exp);
     last = input % 10;
 
-#ifdef DEBUG  
+#if DEBUG
     printf("DEBUG:\tWorking val: %11d\tfirst: %d\tlast: %d\n", input, first, last);
 #endif
 

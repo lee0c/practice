@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "debug.h"
+
 /* Problem statement: Find the length of the longest substring without
 repeating characters in a string
 Constraints:
@@ -10,7 +12,8 @@ Constraints:
 
 /* Compile with: 
 gcc -Wall longestsubstring.c -o longestsubstring.o
-gcc -Wall longestsubstring.c -o longestsubstring.o -D DEBUG
+
+Toggle debug mode in debug.h
 */
 
 int main (int argc, char* argv[])
@@ -44,7 +47,7 @@ int main (int argc, char* argv[])
   start = 0;
   bestLen = 0;
 
-#ifdef DEBUG
+#if DEBUG
       printf("Set start to index %d\n", start);
 #endif
 
@@ -53,7 +56,7 @@ int main (int argc, char* argv[])
 
     if (tracker[input[end] - 32] != -1)
     {
-#ifdef DEBUG
+#if DEBUG
       for (i = start; i <= end; i++)
       {
         printf("%c ", input[i]);
@@ -67,7 +70,7 @@ int main (int argc, char* argv[])
       {
         bestLen = end - start;
 
-#ifdef DEBUG
+#if DEBUG
         printf("Found new best length %d w/ substring [%d, %d]\n", bestLen, start, end-1);
 #endif        
       }
@@ -83,7 +86,7 @@ int main (int argc, char* argv[])
         tracker[input[start] - 32] = -1;
       }
 
-#ifdef DEBUG
+#if DEBUG
       printf("\nMoved start to index %d\n", start);
 #endif
 
@@ -95,7 +98,7 @@ int main (int argc, char* argv[])
     tracker[input[end] - 32] = end;
   }
 
-#ifdef DEBUG
+#if DEBUG
   for (i = start; i <= end; i++)
   {
     printf("%c ", input[i]);
