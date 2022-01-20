@@ -12,7 +12,6 @@ Constraints:
 
 /* Compile with: 
 gcc -Wall sharedprefix.c -o sharedprefix.o
-gcc -Wall sharedprefix.c -o sharedprefix.o -D DEBUG
 */
 
 int main (int argc, char* argv[])
