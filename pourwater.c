@@ -95,7 +95,7 @@ int main (int argc, char* argv[])
   int iteration = 0;
 #endif
 
-  while (buckets[numBuckets - 1] - buckets[0] > 2 * DELTA)
+  while (buckets[numBuckets - 1] - buckets[0] > DELTA)
   {
     avg = average(buckets, numBuckets);
     /* Reset to prevent floating point oddities*/

@@ -1,11 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "debug.h"
+
 /* Problem statement: */
 
 /* Compile with: 
 gcc -Wall name.c -o name.o
-gcc -Wall name.c -o name.o -D DEBUG
+
+Toggle debug mode in debug.h
 */
 
 int main (int argc, char* argv[])
