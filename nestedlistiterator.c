@@ -90,13 +90,13 @@ bool nestedIterHasNext(struct NestedIterator *iter)
 
     /* If we still have items, check type of next item. Integers are easy to
     manage and guarantee we have another item */
-    if (NestedIntegerIsInteger(iter->list[iter-index])) return true;
+    if (NestedIntegerIsInteger(iter->list[iter->index])) return true;
 
     /* Lists require we create a child to protect against empty list cases
     such as [1, []] - there would be a list item but no further numbers
     (not actually sure this is possible) */
-    struct NestedInteger** nestedList = NestedIntegerGetList(iter->list[iter-index]);
-    int nestedListSize = NestedIntegerGetListSize(iter->list[iter-index]);
+    struct NestedInteger** nestedList = NestedIntegerGetList(iter->list[iter->index]);
+    int nestedListSize = NestedIntegerGetListSize(iter->list[iter->index]);
     iter->child = nestedIterCreate(nestedList, nestedListSize);
   }
 }
