@@ -23,6 +23,8 @@ void append(struct list *l, int val);
 /* Append by passing a pre-created node */
 void appendNode(struct list *l, struct node* n);
 
+/* Return a list's length */
+int length(struct list *l);
 /* Print a list */
 void printList(struct list *l);
 
